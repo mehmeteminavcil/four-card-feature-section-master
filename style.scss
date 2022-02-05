@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+// ### Primary
+$red: hsl(0, 78%, 62%);
+$cyan: hsl(180, 62%, 55%);
+$orange: hsl(34, 97%, 64%);
+$blue: hsl(212, 86%, 64%);
+// ### Neutral
+$very-dark-blue: hsl(234, 12%, 34%);
+$grayish-blue: hsl(229, 6%, 66%);
+$very-light-gray: hsl(0, 0%, 98%);
+
+body {
+  background: $very-light-gray;
+}
+
+main {
+  text-align: center;
+  padding-top: 75px;
+
+  h1 {
+    font-weight: lighter;
+    font-size: 35px;
+    color: $very-dark-blue;
+  }
+  > p {
+    font-size: 15px;
+    color: $grayish-blue;
+    padding: 0 33%;
+    margin-bottom: 32px;
+  }
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col {
+  position: relative;
+  max-width: 350px;
+  min-height: 250px;
+  padding: 30px;
+  margin: 28px;
+  text-align: left;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  > h2 {
+    color: $very-dark-blue;
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  > p {
+    font-size: 13px;
+    color: $grayish-blue;
+  }
+  > svg {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+  }
+}
+
+.bold {
+  font-weight: bolder;
+  margin-bottom: 15px;
+  color: $very-dark-blue;
+}
+
+.cyan {
+  border-top: 4px solid $cyan;
+}
+
+.red {
+  border-top: 4px solid $red;
+}
+
+.blue {
+  border-top: 4px solid $blue;
+}
+
+.orange {
+  border-top: 4px solid $orange;
+}
+
+@media (max-width: 700px) {
+  main {
+    > p {
+      padding: 0 10%;
+    }
+  }
+
+  .row {
+    flex-direction: column;
+  }
+}
